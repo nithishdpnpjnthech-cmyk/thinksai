@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thinkz AI — Create. Convert. Close.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style="font-family: 'Space Mono', monospace;" class="bg-black text-white selection:bg-white selection:text-black overflow-x-hidden">
+
+  ```html
+<!-- NAVBAR -->
+<nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/40 border-b border-neutral-900">
+
+  <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 py-4 flex items-center justify-between">
+
+    <!-- LOGO -->
+    <div class="flex items-center">
+      <h1 class="text-2xl md:text-3xl font-bold tracking-wide text-white">
+        Thinkz <span class="text-blue-500">AI</span>
+      </h1>
+    </div>
+
+    <!-- NAV LINKS -->
+    <ul class="hidden lg:flex items-center gap-8 text-xs text-neutral-400">
+
+      <li>
+        <a href="#features" class="hover:text-white transition">
+          Features
+        </a>
+      </li>
+
+      <li>
+        <a href="#solutions" class="hover:text-white transition">
+          Solutions
+        </a>
+      </li>
+
+      <li>
+        <a href="#resources" class="hover:text-white transition">
+          Resources
+        </a>
+      </li>
+
+      <li>
+        <a href="#about" class="hover:text-white transition">
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="#contact" class="hover:text-white transition">
+          Contact
+        </a>
+      </li>
+
+    </ul>
+
+    <!-- CTA BUTTON -->
+    <a
+      href="#contact"
+      class="hidden md:inline-flex items-center gap-2 text-xs px-4 py-2.5 bg-white text-black hover:bg-neutral-200 transition tracking-tight rounded-lg"
+    >
+      Talk to a specialist
+
+      <iconify-icon
+        icon="solar:arrow-right-linear"
+        width="14"
+        height="14"
+      ></iconify-icon>
+
+    </a>
+
+    <!-- MOBILE MENU -->
+    <button class="lg:hidden text-white">
+
+      <iconify-icon
+        icon="solar:hamburger-menu-linear"
+        width="22"
+        height="22"
+      ></iconify-icon>
+
+    </button>
+
+  </div>
+
+</nav>
+```
+
+
+    <!-- HERO -->
+    <section class="relative h-screen w-full overflow-hidden">
+      <div id="canvas-container" class="absolute inset-0 z-0"></div>
+      <div class="absolute inset-0 z-[1] bg-gradient-to-b from-black/40 via-transparent to-black"></div>
+      <main class="relative z-10 w-full h-full max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 pt-28 pb-16 flex flex-col justify-between">
+        <header class="flex justify-between items-start w-full">
+          <div class="text-xs text-neutral-400 tracking-wider">
+            <!-- FOUNDED 2024 — v2.4 -->
+          </div>
+          <div class="text-xs text-right max-w-[280px] text-neutral-400 leading-relaxed hidden md:block">
+            <!-- AI-driven sales intelligence -->
+            <br>
+            <!-- for revenue teams that -->
+            <br>
+            <!-- refuse to guess. -->
+          </div>
+        </header>
+        <section class="mt-12 md:mt-0 flex flex-col md:flex-row md:justify-between md:items-end w-full gap-8">
+          <div>
+            <div class="text-xs text-neutral-500 mb-4 tracking-widest">
+              <!-- // SALES INTELLIGENCE -->
+            </div>
+            <h1 class="text-6xl md:text-8xl lg:text-[8rem] tracking-tight font-bold leading-[0.95]">
+              Create.
+              <br>
+              Convert.
+              <br>
+              Close.
+            </h1>
+            <p class="mt-8 max-w-md text-sm text-neutral-400 leading-relaxed">
+              Accelerate innovation with AI driven solutions, automate workflows, unlock intelligent insights, and build the future with confidence.
+
+            </p>
+            <div class="mt-8 flex flex-col sm:flex-row gap-3">
+              <a href="#contact" class="inline-flex items-center justify-center gap-2 text-xs px-5 py-3 bg-white text-black hover:bg-neutral-200 transition tracking-tight">
+                Talk to a specialist
+                <iconify-icon icon="solar:arrow-right-up-linear" width="14" height="14"></iconify-icon>
+              </a>
+              <a href="#workflow" class="inline-flex items-center justify-center gap-2 text-xs px-5 py-3 border border-neutral-700 text-white hover:bg-white/5 transition tracking-tight">
+                See how it works
+                <iconify-icon icon="solar:play-circle-linear" width="14" height="14"></iconify-icon>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- Geometric Steps -->
+    </section>
+
+    <!-- FEATURE ROW -->
+    <section id="features" class="border-t border-neutral-900 bg-black">
+      <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 py-20 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="border border-neutral-900 p-8 hover:bg-white/5 transition">
+          <iconify-icon icon="solar:cpu-bolt-linear" width="28" height="28" class="text-white"></iconify-icon>
+          <h3 class="mt-6 text-lg font-bold tracking-tight">AI Powered</h3>
+          <p class="mt-2 text-xs text-neutral-400">Smarter decisions</p>
+          <div class="mt-8 text-xs text-neutral-500">01 / FEATURE</div>
+        </div>
+        <div class="border border-neutral-900 p-8 hover:bg-white/5 transition">
+          <iconify-icon icon="solar:graph-up-linear" width="28" height="28" class="text-white"></iconify-icon>
+          <h3 class="mt-6 text-lg font-bold tracking-tight">Real-time Insights</h3>
+          <p class="mt-2 text-xs text-neutral-400">Act instantly</p>
+          <div class="mt-8 text-xs text-neutral-500">02 / FEATURE</div>
+        </div>
+        <div class="border border-neutral-900 p-8 hover:bg-white/5 transition">
+          <iconify-icon icon="solar:chart-square-linear" width="28" height="28" class="text-white"></iconify-icon>
+          <h3 class="mt-6 text-lg font-bold tracking-tight">Predictable Growth</h3>
+          <p class="mt-2 text-xs text-neutral-400">Scale with confidence</p>
+          <div class="mt-8 text-xs text-neutral-500">03 / FEATURE</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="border-t border-neutral-900">
+      <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 py-20">
+        <div class="text-xs text-neutral-500 tracking-widest mb-12">
+          // METRICS / 2025
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0">
+          <div class="md:border-r md:border-neutral-900 md:pr-8">
+            <div class="text-4xl md:text-6xl font-bold tracking-tight">10K+</div>
+            <div class="mt-3 text-xs text-neutral-400">Businesses trust us</div>
+          </div>
+          <div class="md:border-r md:border-neutral-900 md:px-8">
+            <div class="text-4xl md:text-6xl font-bold tracking-tight">2.5M+</div>
+            <div class="mt-3 text-xs text-neutral-400">Leads processed</div>
+          </div>
+          <div class="md:border-r md:border-neutral-900 md:px-8">
+            <div class="text-4xl md:text-6xl font-bold tracking-tight">$120M+</div>
+            <div class="mt-3 text-xs text-neutral-400">Revenue generated</div>
+          </div>
+          <div class="md:pl-8">
+            <div class="text-4xl md:text-6xl font-bold tracking-tight">98%</div>
+            <div class="mt-3 text-xs text-neutral-400">Customer satisfaction</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUSTED -->
+    <section class="border-t border-neutral-900">
+      <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 py-16">
+        <div class="text-xs text-neutral-500 tracking-widest text-center">
+          // TRUSTED BY LEADING COMPANIES
+        </div>
+        <div class="mt-10 grid grid-cols-2 md:grid-cols-6 gap-8 items-center">
+          <div class="text-center text-base font-bold tracking-tighter text-neutral-500 hover:text-white transition">NORTHWIND</div>
+          <div class="text-center text-base font-bold tracking-tighter text-neutral-500 hover:text-white transition">ACMECORP</div>
+          <div class="text-center text-base font-bold tracking-tighter text-neutral-500 hover:text-white transition">VERTEX</div>
+          <div class="text-center text-base font-bold tracking-tighter text-neutral-500 hover:text-white transition">LUMEN</div>
+          <div class="text-center text-base font-bold tracking-tighter text-neutral-500 hover:text-white transition">QUANTA</div>
+          <div class="text-center text-base font-bold tracking-tighter text-neutral-500 hover:text-white transition">HELIOS</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTIONS -->
+    <section id="solutions" class="border-t border-neutral-900">
+      <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 py-20">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div>
+            <div class="text-xs text-neutral-500 tracking-widest mb-3">// SOLUTIONS</div>
+            <h2 class="text-4xl md:text-6xl tracking-tight font-bold leading-[1.05]">
+              Solutions for
+              <br>
+              modern businesses.
+            </h2>
+          </div>
+          <p class="text-xs text-neutral-400 max-w-sm leading-relaxed">
+            A unified intelligence layer that fits how your team already
+            operates — from prospecting to close.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-neutral-900">
+          <div class="bg-black p-8 hover:bg-neutral-950 transition">
+            <iconify-icon icon="solar:target-linear" width="24" height="24" class="text-white"></iconify-icon>
+            <h3 class="mt-6 font-bold tracking-tight">Lead Scoring</h3>
+            <p class="mt-2 text-xs text-neutral-400 leading-relaxed">
+              Prioritize the accounts most likely to convert with predictive models.
+            </p>
+          </div>
+          <div class="bg-black p-8 hover:bg-neutral-950 transition">
+            <iconify-icon icon="solar:pulse-2-linear" width="24" height="24" class="text-white"></iconify-icon>
+            <h3 class="mt-6 font-bold tracking-tight">Pipeline Signals</h3>
+            <p class="mt-2 text-xs text-neutral-400 leading-relaxed">
+              Detect risk early and act on every opportunity before it slips.
+            </p>
+          </div>
+          <div class="bg-black p-8 hover:bg-neutral-950 transition">
+            <iconify-icon icon="solar:routing-linear" width="24" height="24" class="text-white"></iconify-icon>
+            <h3 class="mt-6 font-bold tracking-tight">Workflow Automation</h3>
+            <p class="mt-2 text-xs text-neutral-400 leading-relaxed">
+              Eliminate manual steps with intelligent routing across your stack.
+            </p>
+          </div>
+          <div class="bg-black p-8 hover:bg-neutral-950 transition">
+            <iconify-icon icon="solar:dialog-2-linear" width="24" height="24" class="text-white"></iconify-icon>
+            <h3 class="mt-6 font-bold tracking-tight">Conversation AI</h3>
+            <p class="mt-2 text-xs text-neutral-400 leading-relaxed">
+              Surface coaching moments and winning patterns from every call.
+            </p>
+          </div>
+          <div class="bg-black p-8 hover:bg-neutral-950 transition">
+            <iconify-icon icon="solar:shield-check-linear" width="24" height="24" class="text-white"></iconify-icon>
+            <h3 class="mt-6 font-bold tracking-tight">Forecast Accuracy</h3>
+            <p class="mt-2 text-xs text-neutral-400 leading-relaxed">
+              Replace gut calls with statistically grounded forecasts.
+            </p>
+          </div>
+          <div class="bg-black p-8 hover:bg-neutral-950 transition">
+            <iconify-icon icon="solar:layers-linear" width="24" height="24" class="text-white"></iconify-icon>
+            <h3 class="mt-6 font-bold tracking-tight">Integrations</h3>
+            <p class="mt-2 text-xs text-neutral-400 leading-relaxed">
+              Connect to CRM, email, calendar, and data warehouse natively.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOMER STORIES -->
+    <section class="border-t border-neutral-900">
+      <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 py-20">
+        <div class="text-xs text-neutral-500 tracking-widest mb-3">// CUSTOMER STORIES</div>
+        <h2 class="text-4xl md:text-6xl tracking-tight font-bold leading-[1.05] mb-12">
+          Customer success
+          <br>
+          stories.
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="border border-neutral-900 p-8">
+            <iconify-icon icon="solar:quote-up-linear" width="22" height="22" class="text-neutral-600"></iconify-icon>
+            <p class="mt-4 text-sm leading-relaxed">
+              "We tripled qualified pipeline within a quarter. The
+              signal-to-noise ratio is unmatched."
+            </p>
+            <div class="mt-8 pt-6 border-t border-neutral-900 flex items-center justify-between">
+              <div>
+                <div class="text-xs font-bold tracking-tight">Mira Chen</div>
+                <div class="text-xs text-neutral-500">VP Sales, Northwind</div>
+              </div>
+              <div class="text-xs text-neutral-500">+212%</div>
+            </div>
+          </div>
+          <div class="border border-neutral-900 p-8">
+            <iconify-icon icon="solar:quote-up-linear" width="22" height="22" class="text-neutral-600"></iconify-icon>
+            <p class="mt-4 text-sm leading-relaxed">
+              "Forecasts are now within 3% of actuals. Our board meetings
+              changed overnight."
+            </p>
+            <div class="mt-8 pt-6 border-t border-neutral-900 flex items-center justify-between">
+              <div>
+                <div class="text-xs font-bold tracking-tight">Daniel Ortiz</div>
+                <div class="text-xs text-neutral-500">CRO, Vertex Labs</div>
+              </div>
+              <div class="text-xs text-neutral-500">97% acc.</div>
+            </div>
+          </div>
+          <div class="border border-neutral-900 p-8">
+            <iconify-icon icon="solar:quote-up-linear" width="22" height="22" class="text-neutral-600"></iconify-icon>
+            <p class="mt-4 text-sm leading-relaxed">
+              "Our reps spend 40% less time on admin. The platform pays for
+              itself in weeks."
+            </p>
+            <div class="mt-8 pt-6 border-t border-neutral-900 flex items-center justify-between">
+              <div>
+                <div class="text-xs font-bold tracking-tight">Priya Anand</div>
+                <div class="text-xs text-neutral-500">Head of RevOps, Lumen</div>
+              </div>
+              <div class="text-xs text-neutral-500">-40% admin</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE -->
+    <section id="about" class="border-t border-neutral-900">
+      <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 py-20 grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div>
+          <div class="text-xs text-neutral-500 tracking-widest mb-3">// WHY THINKZ AI</div>
+          <h2 class="text-4xl md:text-6xl tracking-tight font-bold leading-[1.05]">
+            Built for teams that
+            <br>
+            measure outcomes.
+          </h2>
+          <p class="mt-6 text-sm text-neutral-400 leading-relaxed max-w-md">
+            Thinkz AI is the operating layer that turns scattered sales activity
+            into compounding revenue. No black boxes, no fluff — just signal.
+          </p>
+        </div>
+        <div class="space-y-6">
+          <div class="flex gap-6 border-b border-neutral-900 pb-6">
+            <div class="text-xs text-neutral-500 tracking-widest">01</div>
+            <div>
+              <h3 class="font-bold tracking-tight">Transparent models</h3>
+              <p class="mt-2 text-xs text-neutral-400 leading-relaxed">
+                Every prediction is auditable, explainable, and tied back to source data.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-6 border-b border-neutral-900 pb-6">
+            <div class="text-xs text-neutral-500 tracking-widest">02</div>
+            <div>
+              <h3 class="font-bold tracking-tight">Native integrations</h3>
+              <p class="mt-2 text-xs text-neutral-400 leading-relaxed">
+                Two-way sync with the systems your team already lives in.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-6 border-b border-neutral-900 pb-6">
+            <div class="text-xs text-neutral-500 tracking-widest">03</div>
+            <div>
+              <h3 class="font-bold tracking-tight">Enterprise security</h3>
+              <p class="mt-2 text-xs text-neutral-400 leading-relaxed">
+                SOC 2 Type II, GDPR, and customer-managed encryption keys.
+              </p>
+            </div>
+          </div>
+          <div class="flex gap-6">
+            <div class="text-xs text-neutral-500 tracking-widest">04</div>
+            <div>
+              <h3 class="font-bold tracking-tight">Outcome guarantee</h3>
+              <p class="mt-2 text-xs text-neutral-400 leading-relaxed">
+                Measurable revenue impact within 90 days or your money back.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORKFLOW -->
+    <section id="workflow" class="border-t border-neutral-900">
+      <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 py-20">
+        <div class="text-xs text-neutral-500 tracking-widest mb-3">// WORKFLOW</div>
+        <h2 class="text-4xl md:text-6xl tracking-tight font-bold leading-[1.05] mb-16">
+          How it works.
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-px bg-neutral-900">
+          <div class="bg-black p-6">
+            <div class="text-xs text-neutral-500 tracking-widest">STEP 01</div>
+            <iconify-icon icon="solar:magnet-linear" width="28" height="28" class="text-white mt-6"></iconify-icon>
+            <h3 class="mt-6 font-bold tracking-tight">Capture leads</h3>
+            <p class="mt-2 text-xs text-neutral-400 leading-relaxed">
+              Ingest from every source automatically.
+            </p>
+          </div>
+          <div class="bg-black p-6">
+            <div class="text-xs text-neutral-500 tracking-widest">STEP 02</div>
+            <iconify-icon icon="solar:magnifer-zoom-in-linear" width="28" height="28" class="text-white mt-6"></iconify-icon>
+            <h3 class="mt-6 font-bold tracking-tight">Analyze opportunities</h3>
+            <p class="mt-2 text-xs text-neutral-400 leading-relaxed">
+              Score, enrich, and rank in real time.
+            </p>
+          </div>
+          <div class="bg-black p-6">
+            <div class="text-xs text-neutral-500 tracking-widest">STEP 03</div>
+            <iconify-icon icon="solar:sort-by-time-linear" width="28" height="28" class="text-white mt-6"></iconify-icon>
+            <h3 class="mt-6 font-bold tracking-tight">Prioritize actions</h3>
+            <p class="mt-2 text-xs text-neutral-400 leading-relaxed">
+              Surface the next-best move for every rep.
+            </p>
+          </div>
+          <div class="bg-black p-6">
+            <div class="text-xs text-neutral-500 tracking-widest">STEP 04</div>
+            <iconify-icon icon="solar:bolt-linear" width="28" height="28" class="text-white mt-6"></iconify-icon>
+            <h3 class="mt-6 font-bold tracking-tight">Convert faster</h3>
+            <p class="mt-2 text-xs text-neutral-400 leading-relaxed">
+              Shorten cycles with timely interventions.
+            </p>
+          </div>
+          <div class="bg-black p-6">
+            <div class="text-xs text-neutral-500 tracking-widest">STEP 05</div>
+            <iconify-icon icon="solar:rocket-2-linear" width="28" height="28" class="text-white mt-6"></iconify-icon>
+            <h3 class="mt-6 font-bold tracking-tight">Scale revenue</h3>
+            <p class="mt-2 text-xs text-neutral-400 leading-relaxed">
+              Compound wins into predictable growth.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="resources" class="border-t border-neutral-900">
+      <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 py-20 grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div>
+          <div class="text-xs text-neutral-500 tracking-widest mb-3">// FAQ</div>
+          <h2 class="text-4xl md:text-5xl tracking-tight font-bold leading-[1.05]">
+            Frequently
+            <br>
+            asked
+            <br>
+            questions.
+          </h2>
+          <p class="mt-6 text-xs text-neutral-400 leading-relaxed max-w-xs">
+            Still curious? Reach out — our team replies within one business day.
+          </p>
+        </div>
+        <div class="lg:col-span-2 divide-y divide-neutral-900 border-t border-b border-neutral-900">
+          <details class="group p-6 cursor-pointer">
+            <summary class="flex justify-between items-center list-none">
+              <span class="font-bold tracking-tight text-sm">How does Thinkz AI work?</span>
+              <iconify-icon icon="solar:add-square-linear" width="20" height="20" class="text-neutral-400 group-open:hidden"></iconify-icon>
+              <iconify-icon icon="solar:minus-square-linear" width="20" height="20" class="text-white hidden group-open:block"></iconify-icon>
+            </summary>
+            <p class="mt-4 text-xs text-neutral-400 leading-relaxed">
+              Thinkz AI ingests data from your CRM, email, and communication
+              tools, then applies models trained on millions of B2B sales
+              motions to surface signals, prioritize accounts, and automate
+              routine work.
+            </p>
+          </details>
+          <details class="group p-6 cursor-pointer">
+            <summary class="flex justify-between items-center list-none">
+              <span class="font-bold tracking-tight text-sm">Can Thinkz AI integrate with existing systems?</span>
+              <iconify-icon icon="solar:add-square-linear" width="20" height="20" class="text-neutral-400 group-open:hidden"></iconify-icon>
+              <iconify-icon icon="solar:minus-square-linear" width="20" height="20" class="text-white hidden group-open:block"></iconify-icon>
+            </summary>
+            <p class="mt-4 text-xs text-neutral-400 leading-relaxed">
+              Yes. We offer native, bi-directional integrations with Salesforce,
+              HubSpot, Outreach, Salesloft, Gong, Slack, and most major data warehouses.
+            </p>
+          </details>
+          <details class="group p-6 cursor-pointer">
+            <summary class="flex justify-between items-center list-none">
+              <span class="font-bold tracking-tight text-sm">Is Thinkz AI suitable for startups?</span>
+              <iconify-icon icon="solar:add-square-linear" width="20" height="20" class="text-neutral-400 group-open:hidden"></iconify-icon>
+              <iconify-icon icon="solar:minus-square-linear" width="20" height="20" class="text-white hidden group-open:block"></iconify-icon>
+            </summary>
+            <p class="mt-4 text-xs text-neutral-400 leading-relaxed">
+              Absolutely. We have a Starter tier built for teams under 25 reps
+              and scale all the way to enterprise deployments.
+            </p>
+          </details>
+          <details class="group p-6 cursor-pointer">
+            <summary class="flex justify-between items-center list-none">
+              <span class="font-bold tracking-tight text-sm">How quickly can businesses get started?</span>
+              <iconify-icon icon="solar:add-square-linear" width="20" height="20" class="text-neutral-400 group-open:hidden"></iconify-icon>
+              <iconify-icon icon="solar:minus-square-linear" width="20" height="20" class="text-white hidden group-open:block"></iconify-icon>
+            </summary>
+            <p class="mt-4 text-xs text-neutral-400 leading-relaxed">
+              Most teams go live within 7 days. Enterprise rollouts with custom
+              workflows typically complete in 3–4 weeks.
+            </p>
+          </details>
+          <details class="group p-6 cursor-pointer">
+            <summary class="flex justify-between items-center list-none">
+              <span class="font-bold tracking-tight text-sm">Does Thinkz AI provide analytics and reporting?</span>
+              <iconify-icon icon="solar:add-square-linear" width="20" height="20" class="text-neutral-400 group-open:hidden"></iconify-icon>
+              <iconify-icon icon="solar:minus-square-linear" width="20" height="20" class="text-white hidden group-open:block"></iconify-icon>
+            </summary>
+            <p class="mt-4 text-xs text-neutral-400 leading-relaxed">
+              Yes — a full analytics suite with dashboards, cohort breakdowns,
+              forecast variance tracking, and exportable reports for executives.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="border-t border-neutral-900 relative overflow-hidden">
+      <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="text-xs text-neutral-500 tracking-widest mb-3">// CONTACT</div>
+          <h2 class="text-4xl md:text-6xl tracking-tight font-bold leading-[1.05]">
+            Ready to close
+            <br>
+            more revenue?
+          </h2>
+          <p class="mt-6 text-sm text-neutral-400 leading-relaxed max-w-md">
+            Book a 30-minute working session with a Thinkz specialist. We'll
+            walk through your pipeline and identify the biggest opportunities.
+          </p>
+          <div class="mt-8 space-y-3 text-xs text-neutral-400">
+            <div class="flex items-center gap-3">
+              <iconify-icon icon="solar:letter-linear" width="16" height="16"></iconify-icon>
+              hello@thinkz.ai
+            </div>
+            <div class="flex items-center gap-3">
+              <iconify-icon icon="solar:map-point-linear" width="16" height="16"></iconify-icon>
+              Bangalore
+            </div>
+          </div>
+        </div>
+        <form class="border border-neutral-900 p-8 space-y-5 bg-neutral-950/30">
+          <div>
+            <label class="text-xs text-neutral-500 tracking-widest">NAME</label>
+            <input type="text" placeholder="Jane Doe" class="mt-2 w-full bg-transparent border-b border-neutral-800 py-2 text-sm focus:outline-none focus:border-white transition" style="font-family: 'Space Mono', monospace;">
+          </div>
+          <div>
+            <label class="text-xs text-neutral-500 tracking-widest">WORK EMAIL</label>
+            <input type="email" placeholder="jane@company.com" class="mt-2 w-full bg-transparent border-b border-neutral-800 py-2 text-sm focus:outline-none focus:border-white transition" style="font-family: 'Space Mono', monospace;">
+          </div>
+          <div>
+            <label class="text-xs text-neutral-500 tracking-widest">COMPANY</label>
+            <input type="text" placeholder="Acme Inc." class="mt-2 w-full bg-transparent border-b border-neutral-800 py-2 text-sm focus:outline-none focus:border-white transition" style="font-family: 'Space Mono', monospace;">
+          </div>
+          <div>
+            <label class="text-xs text-neutral-500 tracking-widest">MESSAGE</label>
+            <textarea rows="3" placeholder="Tell us about your team..." class="mt-2 w-full bg-transparent border-b border-neutral-800 py-2 text-sm focus:outline-none focus:border-white transition resize-none" style="font-family: 'Space Mono', monospace;"></textarea>
+          </div>
+          <button type="submit" class="w-full inline-flex items-center justify-center gap-2 text-xs px-5 py-3 bg-white text-black hover:bg-neutral-200 transition tracking-tight">
+            Talk to a specialist
+            <iconify-icon icon="solar:arrow-right-up-linear" width="14" height="14"></iconify-icon>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-neutral-900">
+      <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 py-16">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+          <div class="col-span-2">
+           <div class="flex items-center">
+  <h1 class="text-2xl font-bold tracking-wide text-white">
+    Thinkz <span class="text-blue-500">AI</span>
+  </h1>
+</div>
+            <p class="mt-4 text-xs text-neutral-400 leading-relaxed max-w-xs">
+              AI powered intelligence that transforms ideas into scalable digital solutions.
+
+            </p>
+            <div class="mt-6 flex gap-3">
+              <a href="#" class="w-9 h-9 border border-neutral-900 flex items-center justify-center hover:bg-white hover:text-black transition">
+                <iconify-icon icon="solar:link-linear" width="14" height="14"></iconify-icon>
+              </a>
+              <a href="#" class="w-9 h-9 border border-neutral-900 flex items-center justify-center hover:bg-white hover:text-black transition">
+                <iconify-icon icon="solar:chat-round-line-linear" width="14" height="14"></iconify-icon>
+              </a>
+              <a href="#" class="w-9 h-9 border border-neutral-900 flex items-center justify-center hover:bg-white hover:text-black transition">
+                <iconify-icon icon="solar:videocamera-linear" width="14" height="14"></iconify-icon>
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="text-xs text-neutral-500 tracking-widest mb-4">PRODUCT</div>
+            <ul class="space-y-2 text-xs text-neutral-400">
+              <li><a href="#features" class="hover:text-white transition">Features</a></li>
+              <li><a href="#solutions" class="hover:text-white transition">Solutions</a></li>
+              <li><a href="#" class="hover:text-white transition">Pricing</a></li>
+              <li><a href="#resources" class="hover:text-white transition">Resources</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="text-xs text-neutral-500 tracking-widest mb-4">COMPANY</div>
+            <ul class="space-y-2 text-xs text-neutral-400">
+              <li><a href="#about" class="hover:text-white transition">About</a></li>
+              <!-- <li><a href="#" class="hover:text-white transition">Careers</a></li> -->
+              <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="text-xs text-neutral-500 tracking-widest mb-4">LEGAL</div>
+            <ul class="space-y-2 text-xs text-neutral-400">
+              <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+              <li><a href="#" class="hover:text-white transition">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-12 pt-8 border-t border-neutral-900 flex flex-col md:flex-row justify-between gap-4 text-xs text-neutral-500">
+          <div>© 2025 Thinkz AI · All rights reserved.</div>
+          <div>PJN technologies</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

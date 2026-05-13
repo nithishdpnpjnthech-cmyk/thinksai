@@ -1,0 +1,53 @@
+/* ── Box sizing ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ── Remove double scrollbar ── */
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scrollbar-width: none;        /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none;                /* Chrome / Safari */
+}
+
+/* ── Body reset ── */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Space Mono', monospace;
+}
+
+/* ── Canvas fills hero section, not the whole page ── */
+#canvas-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#canvas-container canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ── Inline style equivalents (moved from HTML attributes) ── */
+img[alt="Thinkz AI"] {
+  mix-blend-mode: screen;
+}
+
+input,
+textarea {
+  font-family: 'Space Mono', monospace;
+}
